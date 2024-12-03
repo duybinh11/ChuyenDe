@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Giày Đỉnh Cao</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Logo trang trên tiêu đề -->
+    <link rel="shortcut icon" href="./Img/Assets/SangLogo.png">
+    <meta name="description" content="Với niềm đam mê chém gió, quyết tâm SEO top Google">
+    <meta name="keywords" content="Hoàng Sang, Giày Đỉnh Cao | Hoàng Sang,Giày Đỉnh Cao, Giày Việt Nam, Best Web Design Đà Nẵng, Hoàng Sang SICT, Best Web Design Ban Mê, Best Web Design, Ban Mê, Đà Nẵng, Best Web Design SICT, Sict.Work">
+    <meta name="author" content="Phạm Hoàng Sang">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <!-- Font Awesome  CDN-->
+    <script src="https://kit.fontawesome.com/1b32f59f62.js" crossorigin="anonymous"></script>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/Product-Common.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158246306-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-158246306-1');
+    </script>
+    <!-- <script async src="https://cse.google.com/cse.js?cx=001159946809632492442:1ktplpnsqyw"></script>
+    <div class="gcse-search"></div> -->
+</head>
+<body >
+  <script>
+    var div = document.createElement('div');
+    div.className = 'fb-customerchat';
+    div.setAttribute('page_id', '105491614515397');
+    div.setAttribute('ref', '');
+    document.body.appendChild(div);
+    window.fbMessengerPlugins = window.fbMessengerPlugins || {
+      init: function () {
+        FB.init({
+          appId            : '1678638095724206',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v3.3'
+        });
+      }, callable: []
+    };
+    window.fbAsyncInit = window.fbAsyncInit || function () {
+      window.fbMessengerPlugins.callable.forEach(function (item) { item(); });
+      window.fbMessengerPlugins.init();
+    };
+    setTimeout(function () {
+      (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    }, 0);
+  </script>
+  <!-- Thanh Kết nối -->
+  <header class="container-fluid">
+    <div class="row bg-hd">
+      <div class="col-lg-9 col-md-7 col-sm-4 col-5">
+        <a style="color: #fff;" data-toggle="tooltip" data-placement="top" title="Kết nối tài khoản mạng xã hội của bạn để theo dõi những bài viết mới nhất của tôi">Kết Nối</a>&ensp;
+        <a  data-toggle="tooltip" data-placement="top" title="FaceBook" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a  data-toggle="tooltip" data-placement="top" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a  data-toggle="tooltip" data-placement="top" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div th:if="${username == null}" class="col-lg-3 col-md-5 col-sm-8 col">
+        <a href="registration.html" data-toggle="tooltip" data-placement="top" title="Trở thành thành viên của Hoàng Sang để nhận được nhiều ưu đãi!"><i class="fas fa-key"></i> Đăng Ký </a>|
+        <a href="login.html" data-toggle="tooltip" data-placement="top" title="Đăng nhập để sử dụng nhiều tính năng hơn!"><i class="fas fa-user-tie"></i> Đăng Nhập</a>
+      </div>
+    </div>
+  </header> 
+  <!-- Phần này là thanh điều hướng đáp ứng bắt trước apple -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <button class="navbar-toggler m-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand mx-auto " href="index.html"><img src="./Img/Assets/SangLogo.png" alt="Logo Hoàng Sang" width="30px" height="30px"></a>
+    <div class="pl-3 d-inline show-cart" data-toggle="tooltip" data-placement="top" title="Giỏ hàng hiện tại của bạn"><i class="fas fa-cart-plus"></i></div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item navshover active mx-auto">
+            <a class="nav-link" href="index.html">Trang Chủ</a>
+        </li>
+        <li class="nav-item navshover mx-auto category-link">
+          <a class="nav-link" href="#">Phân loại</a>
+          <div class="container-categoory">
+            <div th:each="category : ${categorys}">
+              <a th:href="@{|/category_item?category=${category.id}|}" th:text="${category.name}"></a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item navshover mx-auto">
+            <a class="nav-link" href="cart">gio hang</a>
+        </li>
+        <li class="nav-item navshover mx-auto">
+            <a class="nav-link" href="order">don hang</a>
+        </li>
+        <li class="nav-item navshover mx-auto">
+            <a class="nav-link" href="account">tài khoản</a>
+        </li>
+    </ul>
+    <form class="form-inline search-box">
+      <input class="search-txt" type="search" placeholder=" Tìm Kiếm Sản Phẩm">
+      <a class="search-btn btn mx-auto" type="submit" data-toggle="tooltip" data-placement="top" title="Tìm kiếm sản phẩm"><i class="fas fa-search"></i></a>
+    </form>
+    </div>
+  </nav>
+  <!-- Giõ hàng cơ bản -->
+
+  <!-- Banner Hunter -->
+  <a ><img src="./Img/Giay/BannerHunter.jpg" alt="" width="100%"></a>
+  <!-- Sản phẩm nổi bật -->
+  <div class="container-fluid">
+    <div class="row text-center">
+      <div class="col-12 spnoibat mt-2">
+        <h1>Sản Phẩm Nổi Bật</h1>
+        <hr>
+      </div>
+
+
+      <div th:each="item : ${items}" class="col-md-4 col-lg-2 col-sm-6  col-6">
+        <a th:href="@{|/detail_item?idItem=${item.id}|}" style="color: black;">
+          <div class="product-top">
+            <img th:src="@{${item.img}}" alt="">
+            <div class="overlay ">
+              <button type="button" class="btn btn-secondary" onclick="window.location.href='Bitis-Hunter-X.html'"><i class="far fa-eye"></i></button>
+              <button type="button" class="btn btn-secondary"><i class="far fa-heart"></i></button>
+              <button type="button" class="btn btn-secondary"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+          </div>
+          <div class="product-bottom text-center">
+            <div class="layout-star" th:each="i : ${#numbers.sequence(0, item.rate - 1)}">
+              <i class="fas fa-star layout-star" ></i>
+            </div>
+            <h3 th:text="${item.name}"></h3>
+            <h5 th:text="${item.price} + 'đ'"></h5>
+          </div>
+        </a>
+      </div>
+
+    </div>  
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3>Thông Tin</h3>
+            <p>Chúng tôi là cửa hàng chuyên cung cấp các sản phẩm thể thao chất lượng cao, đáp ứng nhu cầu đa dạng của người tiêu dùng.</p>
+        </div>
+        <div class="footer-section links">
+            <h3>Liên Kết</h3>
+            <ul>
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Sản Phẩm</a></li>
+                <li><a href="#">Khuyến Mãi</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h3>Liên Hệ</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Thành phố XYZ</p>
+            <p><i class="fas fa-phone"></i> +84 123 456 789</p>
+            <p><i class="fas fa-envelope"></i> contact@sportshop.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Sport Shop. All rights reserved.</p>
+    </div>
+</footer>
+
+  
+<button onclick="topFunction()" id="myBtn"><i class="fas fa-arrow-up"></i></button> 
+    <!-- Start JS Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+
+
+      $('.slider').slick({
+        dots: true,
+        infinite: false,
+        speed: 3000,
+        slidesToShow: 6,
+        slidesToScroll: 2,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true,
+              arrows: false
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              arrows: false
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+      
+    </script>
+    <!-- <script>
+      $(".show-cart").click(function(){
+        $(".sm-menu").fadeToggle("fast");
+      });
+    </script> -->
+</body>
+</html>
+
+
+
+<div class="cart-item">
+  <div class="cart-item-image">
+    <img src="./Img/Assets/biti1.1.jpg" alt="Sản phẩm 1">
+  </div>
+  <div class="cart-item-details">
+    <h3 th:text="${cart.item.name}"></h3>
+    <p th:text="'Giá: ' + (${cart.item.price} * ${cart.quantity}) + 'đ'"></p>
+    <div class="cart-item-quantity">
+      <button type="button" class="quantity-btn decrease">-</button>
+      <span th:text="${cart.quantity}" class="quantity-value"></span>
+      <button type="button" class="quantity-btn increase">+</button>
+    </div>
+    <button class="remove-btn">Xóa</button>
+    <button class="buy-btn">Mua</button>
+  </div>
+</div>

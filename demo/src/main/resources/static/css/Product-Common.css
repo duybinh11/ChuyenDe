@@ -1,0 +1,106 @@
+.imgproduct{
+    border-radius: 10px 10px 0 0;
+}
+.fa-star{
+    font-size: 12px;
+    color: #808080;
+}
+.tick{
+    color: rgb(254, 215, 0);
+}
+.product-common a{
+    color: #000;
+}
+.category{
+    font-size: 16px;
+    color: #a4a4a4;
+}
+span.sticker{
+    background: #e74c3c;
+    border-radius: 100%;
+    color: #fff;
+    right: 5px;
+    position: absolute;
+    top: 5px;
+    z-index: 99;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.product-name h4{
+    color: #0363cd;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    
+    text-transform: capitalize;
+}
+.price-box {
+    line-height: 1;
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+.price-box .new-price{
+    color: #e80f0f !important;
+    font-size: 16px;
+    font-weight: 700;
+}
+.price-box .old-price{
+    padding-left: 5px;
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+.price-box .discount-percentage{
+    float: right;
+    font-size: 16px;
+    color: #e80f0f;
+}
+.add-actions-link button{
+    margin: 10px 0 10px;
+    background-color: #d3d3d3;
+    color: #000;
+}
+.product-common .imghovertop{
+    display: none;
+    position: absolute;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+    z-index: 98;
+}
+.product-common:hover .imghovertop{
+    display: inline;
+}
+.product-common{
+    position: relative;
+    display: inline-block;
+    transition: box-shadow .3s;
+    border-radius: 10px;
+    -webkit-transition: all 300ms ease-in 0s;
+	transition: all 300ms ease-in 0s;
+}
+.product-common:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+@media only screen and (max-width: 475px){
+    .add-actions-link{
+        display: none;
+    }
+    .product-name h4{
+        font-size:16px
+    }
+    .nrate .fa-star{
+        display: none;
+    }
+    .price-box .new-price{
+        font-size: 12px;
+    }
+    .price-box .old-price{
+        font-size: 12px;
+    }
+}

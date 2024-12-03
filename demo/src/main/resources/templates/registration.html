@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Đăng Ký | Hoàng Sang</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="./Img/Assets/SangLogo.png">
+    <link rel="apple-touch-icon" href="./Img/Assets/SangLogo.png"/>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Font Awesome  CDN-->
+    <script src="https://kit.fontawesome.com/1b32f59f62.js" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.8.2/css/all.css"></script>
+    <!-- Css -->
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/registration.css'>
+    <script src="./js/Signup.js"></script>
+</head>
+<body style="background: url(../Img/Assets/bglogin.jpg) no-repeat center fixed ;">
+    <div class="modal-dialog text-center">
+        <div class="col-sm-8 main-section">
+            <div class="modal-content">
+                <div class="col-12 user-img">
+                    <a href="index.html"><img src="./Img/Assets/SangLogo.png" alt="Hoàng Sang"></a>
+                </div>
+                <div class="form-head-register">
+                    <h4 class="title-block">Đăng Ký Tài Khoản</h4>
+                    <form id="frmSignup" action="register" method="post" >
+                        
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-user-tie"></i></div>
+                            </div>
+                            <input name="username" type="text" class="form-control" placeholder="Tên đăng nhập" autocomplete="username" required id="usernameSignup">
+                        </div>
+                        
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="far fa-envelope"></i></div>
+                            </div>
+                            <input name="email" type="email" class="form-control" placeholder="Email" autocomplete="email" required id="emailSignup">
+                        </div>
+            
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-lock"></i></div>
+                            </div>
+                            <input name="password" type="password" class="form-control" placeholder="Mật khẩu" autocomplete="new-password" aria-autocomplete="list" required id="passwordSignup">
+                        </div>
+                    <div class="form-check">
+                        <div class="checkbox-area">
+                            <input id="cbAgree" name="cbAgree" type="checkbox" value="1" class="form-check-input" data-error="#blockcbAgree-error" required>
+                            <label class="form-check-label" for="cbAgree">
+                            Đồng ý với <a href="Dieu-khoan.html" target="_blank">Điều khoản</a> của Hoàng Sang
+                            </label>
+                        </div>
+                    <div id="blockcbAgree-error"></div>
+                    </div>
+                    <button onclick="Signup()" type="submit2" class="btn btn-primary">Đăng ký</button>
+                    </form>
+                    <div class="switch-type-login">Hoặc sử dụng tài khoản khác</div>
+                    <div class="signin-options">
+                        <div class="row text-center social">
+                            <div class="col-3 fb"><i class="fab fa-facebook"></i></div>
+                            <div class="col-3 gg"><i class="fab fa-google"></i></div>
+                            <div class="col-3 wd"><i class="fab fa-windows"></i></div>
+                        </div>
+                    </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

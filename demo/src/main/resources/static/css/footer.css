@@ -1,0 +1,37 @@
+@media only screen and (min-width: 992px) {
+    footer .sb{
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    footer .dk{
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 578px) {
+    footer .row .col p a{
+        font-size: 16px;
+        text-decoration: none;
+    }
+    footer .m2 {
+        text-align: center;
+    }
+}
+footer a{
+    font-size: 16px;
+    color: #000;
+    font-weight: normal;
+    text-decoration: none;
+    padding-bottom: -10px;
+}
+footer .ft p{
+    font-size: 21px;
+    font-weight: bold;
+}
+footer .pttt img{
+    margin-left: 3px;
+    margin-bottom: 6px;
+}
+footer .bq{
+    text-align: center;
+}

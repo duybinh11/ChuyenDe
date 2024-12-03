@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Adidas 17TH | Giày Đỉnh Cao | Hoàng Sang</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="./Img/Assets/SangLogo.png">
+	<!-- Font Awesome, Style -->
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="./css/Bitis-Hunter-X.css">
+    <link rel="stylesheet" type="text/css" href="./css/smoothproducts.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="./js/loadpage.js">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
+</head>
+<body>
+<div id="header"></div>	
+	<!-- Product Detail Page Start -->
+	<div class="product-detail">
+		<div class="container">
+			<div class="row justify-content-center">
+                <div class="col-md-6 col-sm-10 col-12 text-center my-3">
+                    <div class="product-detail-left">
+                        <img th:src="@{${item.img}}" alt="" width="300px">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-12 my-3">
+                    <div class="product-detail-right">
+                        <h4 th:text="${item.name}"></h4>
+                        <small th:text="'Mã sản phẩm:' + ${item.id}"></small>
+                        <div class="d-flex justify-content-between">
+                            <p th:text="${item.price} +'đ'" style="color: rgb(250, 0, 0); font-size: 20px;"></p>
+                            <small><i>*Đã bao gồm VAT</i></small>
+                        </div>
+                        <hr style="margin-top: -10px;">
+                        <p th:text="'Màu Sắc : '+ ${item.color}"></p> 
+                        <div class="d-flex justify-content-between btn-end">
+                            <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Mua Ngay </button>
+                            <form action="addCart" method="post">
+                                <input type="hidden" name="itemId" th:value="${item.id}" />
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-pencil-alt"></i> Thêm giỏ hàng
+                                </button>
+                            </form>
+                        </div>
+                        <hr>
+                        <p><i class="fas fa-box"></i> MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</p>
+                        <p><i class="fas fa-box-open"></i> ĐỔI TRẢ DỄ DÀNG</p>
+                        <p><i class="fas fa-phone"></i> TỔNG ĐÀI BÁN HÀNG 0332148505 (Từ 8h30 - 21:30 mỗi ngày)</p>
+                        <hr>
+                        <div class="d-flex justify-content-center">
+                            <div class="fb-like mr-1" data-href="http://www.sict.work/Adidas.html" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div> 
+                            <div class="fb-save" data-uri="http://sict.work/Adidas.html" data-size="large"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+    <div class="container my-5">
+        <h3 class="text-center">MÔ TẢ SẢN PHẨM</h3>
+        <hr width="80%">
+        <div class="row justify-content-center">
+            <div class="col-10">                
+                <p> <i th:text="'      '+  ${item.description}" class="fas fa-check"></i></p>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+<div id="product"></div>
+<div id="footer"></div>
+<!-- Jquery V.3.3.1 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/smoothproducts.min.js"></script>
+
+<script src="js/Bitis-Hunter.js"></script>
+<script>
+	$(function(){
+		$(".sp-wrap").smoothproducts();
+	});
+</script>
+</body>
+</html>
